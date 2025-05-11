@@ -3,7 +3,6 @@ import { StatusBar } from "expo-status-bar";
 import { NAV_THEME } from "@/lib/constants";
 
 const AuthLayout = () => {
-
   return (
     <>
       <Stack>
