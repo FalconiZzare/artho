@@ -6,8 +6,24 @@ import { router } from "expo-router";
 import { Text, View } from "react-native";
 import { EllipsisVertical } from "@/lib/icons/EllipsisVertical";
 import { PROFILE_OPTIONS } from "@/constants/ProfileOptions";
+import { useUserStore } from "@/store/store.user";
+import { Button } from "@/components/ui/button";
 
 const Profile = () => {
+  const updateAuth = useUserStore((state) => state.updateAuth);
+  const isAuthenticated = useUserStore((state) => state.isAuthenticated);
+
+  const handleLogout = () => {
+    updateAuth(false);
+    router.push("sign-in");
+  };
+
+  React.useEffect(() => {
+    if (!isAuthenticated) {
+      router.replace("/sign-in");
+    }
+  }, [isAuthenticated]);
+
   return (
     <SafeAreaView className="h-full">
       <View className={"flex flex-row items-center justify-between p-4"}>
@@ -30,23 +46,45 @@ const Profile = () => {
           <Text className={"text-xl font-bold text-foreground/80"}>Nafiees Ahamed</Text>
           <View className={"mt-6 h-1 w-full bg-foreground/10"} />
 
-          {PROFILE_OPTIONS.map((option, index) => (
-            <View key={index}>
-              <View
-                className={
-                  "flex w-full flex-row items-center justify-between border-b border-foreground/10 px-4 py-6"
-                }
+          {PROFILE_OPTIONS.map((option, index) =>
+            option.isLogout ? (
+              <Button
+                key={index}
+                className={"native:px-0 native:py-0 bg-transparent"}
+                onPress={handleLogout}
               >
-                <View className={"flex flex-row items-center"}>
-                  {option.icon}
-                  <Text className={"ml-7 text-lg font-semibold text-foreground/80"}>
-                    {option.title}
-                  </Text>
+                <View
+                  className={
+                    "mt-5 flex w-full flex-row items-center justify-between border-b border-foreground/10 px-4 py-6"
+                  }
+                >
+                  <View className={"flex flex-row items-center"}>
+                    {option.icon}
+                    <Text className={"ml-7 text-lg font-semibold text-foreground/80"}>
+                      {option.title}
+                    </Text>
+                  </View>
+                  <ChevronRight className={"text-foreground/60"} size={24} />
                 </View>
-                <ChevronRight className={"text-foreground/60"} size={24} />
+              </Button>
+            ) : (
+              <View key={index}>
+                <View
+                  className={
+                    "flex w-full flex-row items-center justify-between border-b border-foreground/10 px-4 py-6"
+                  }
+                >
+                  <View className={"flex flex-row items-center"}>
+                    {option.icon}
+                    <Text className={"ml-7 text-lg font-semibold text-foreground/80"}>
+                      {option.title}
+                    </Text>
+                  </View>
+                  <ChevronRight className={"text-foreground/60"} size={24} />
+                </View>
               </View>
-            </View>
-          ))}
+            )
+          )}
         </View>
       </View>
     </SafeAreaView>

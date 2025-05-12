@@ -28,6 +28,16 @@ const SignIn = () => {
     }
   };
 
+  const handleFingerPrint = () => {
+    toast.success("Fingerprint authenticated");
+    const timer = setTimeout(() => {
+      updateAuth(true);
+      router.push("/home");
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  };
+
   return (
     <ImageBackground
       source={require("@/assets/images/background.png")}
@@ -136,6 +146,7 @@ const SignIn = () => {
                   width: 80,
                   borderRadius: 12
                 }}
+                onPress={handleFingerPrint}
               >
                 <Fingerprint style={{ color: "rgba(0, 166, 81, 0.9)" }} />
               </Button>
