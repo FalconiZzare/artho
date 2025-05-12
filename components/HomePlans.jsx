@@ -4,20 +4,7 @@ import { ProgressChart } from "react-native-chart-kit";
 import { Car } from "@/lib/icons/Car";
 import { Progress } from "@/components/ui/progress";
 import { Cow } from "@/lib/icons/SVG/Cow";
-
-const chartConfig = {
-  backgroundGradientFrom: "#1E2923",
-  backgroundGradientFromOpacity: 0,
-  backgroundGradientTo: "#41b8d5",
-  backgroundGradientToOpacity: 0,
-  color: (opacity = 1) => `rgba(65, 184, 213, ${opacity})`,
-  strokeWidth: 1,
-  barPercentage: 0.5,
-  useShadowColorFromDataset: false,
-  propsForLabels: {
-    fontSize: 11
-  }
-};
+import { CHART_CONFIG } from "@/constants/ChartConfig";
 
 const CAR_CHART_DATA = {
   labels: ["Car Savings"],
@@ -63,7 +50,7 @@ const Plan = ({ data, title, expense, budget, icon }) => {
           data={data}
           width={60}
           height={60}
-          chartConfig={chartConfig}
+          chartConfig={CHART_CONFIG}
           hideLegend
           strokeWidth={6}
           radius={25}
