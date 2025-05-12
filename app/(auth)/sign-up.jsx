@@ -83,7 +83,7 @@ const SignUp = () => {
             <Progress
               value={step * 20}
               className={"shadow-inner bg-gray-200"}
-              indicatorClassName={"bg-[#00a651]"}
+              indicatorClassName={"bg-[#00a651] rounded-full"}
             />
 
             {step === 1 && <StepOne onPress={handleContinue} />}

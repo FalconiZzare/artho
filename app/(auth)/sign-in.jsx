@@ -42,7 +42,7 @@ const SignIn = () => {
               style={{ maxWidth: 220 }}
               resizeMode="contain"
             />
-            <Text className={"mb-4 text-5xl font-bold"}>
+            <Text className={"mb-4 text-4xl font-bold"}>
               Welcome to&nbsp;
               <Text style={{ color: "#00a651" }}>Artho</Text>
             </Text>
