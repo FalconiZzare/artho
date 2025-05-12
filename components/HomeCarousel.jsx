@@ -32,8 +32,7 @@ const HomeCarousel = () => {
           parallaxScrollingScale: 0.9,
           parallaxScrollingOffset: 44
         }}
-        snapEnabled={false}
-        pagingEnabled={false}
+        snapEnabled
         data={data}
         width={350}
         height={170}
