@@ -12,7 +12,8 @@
       "android": {
         "buildType": "apk",
         "gradleCommand": ":app:assembleRelease -PreleaseFile=com.akashasolutions.artho.apk"
-      }
+      },
+      "environment": "production"
     },
     "production": {
       "autoIncrement": true
