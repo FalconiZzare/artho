@@ -52,7 +52,7 @@ const SignIn = () => {
               style={{ maxWidth: 220 }}
               resizeMode="contain"
             />
-            <Text className={"mb-4 text-4xl font-bold"}>
+            <Text className={"-mt-12 mb-4 text-4xl font-bold"}>
               Welcome to&nbsp;
               <Text style={{ color: "#00a651" }}>Artho</Text>
             </Text>
@@ -89,7 +89,7 @@ const SignIn = () => {
               <Label className={"text-xs text-foreground/70"}>For testing, use: 01701122336</Label>
             </View>
 
-            <View className={"mb-8 w-full"}>
+            <View className={"mb-4 w-full"}>
               <Label className={"mb-1 text-3xl text-foreground/80"} style={{ fontSize: 16 }}>
                 4-Digit PIN
               </Label>
@@ -125,7 +125,7 @@ const SignIn = () => {
                 display: "flex",
                 flexDirection: "row",
                 gap: 8,
-                marginBottom: 20
+                marginBottom: 10
               }}
             >
               <Button
@@ -152,7 +152,7 @@ const SignIn = () => {
               </Button>
             </View>
 
-            <Text className={"mb-4 text-xl text-foreground/70"}>
+            <Text className={"text-xl text-foreground/70"}>
               Don't have an account?&nbsp;
               <Link href={"/sign-up"}>
                 <Text className={"font-bold"} style={{ color: "#00a651" }}>
