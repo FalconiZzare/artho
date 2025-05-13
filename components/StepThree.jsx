@@ -69,12 +69,16 @@ const DisabledOption = ({ title, description }) => {
           height: 24,
           width: 24
         }}
-      ></View>
+      />
       <View>
         <Text className={"mb-2 text-xl font-semibold text-foreground/40"}>{title}</Text>
-        <Text className={"text-base font-medium text-foreground/30"} style={{ maxWidth: 280 }}>
-          {description}
-        </Text>
+        <View className={"flex flex-row"}>
+          <Text
+            className={"min-w-[250px] flex-1 flex-wrap text-base font-medium text-foreground/30"}
+          >
+            {description}
+          </Text>
+        </View>
       </View>
     </View>
   );

@@ -9,7 +9,10 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal"
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease -PreleaseFile=com.akashasolutions.artho.apk"
+      }
     },
     "production": {
       "autoIncrement": true

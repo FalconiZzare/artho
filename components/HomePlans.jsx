@@ -18,7 +18,7 @@ const QURBANI_CHART_DATA = {
 
 const HomePlans = () => {
   return (
-    <View className={"mt-2"}>
+    <View className={"mb-6 mt-2"}>
       <Text className={"font-semibold text-primary"}>My Plans</Text>
       <View className={"mt-2 flex flex-row items-center justify-center"}>
         <Plan

@@ -7,7 +7,7 @@ import { Heart } from "@/lib/icons/Heart";
 import { Coins } from "@/lib/icons/Coins";
 import { ArrowBigRightDash } from "@/lib/icons/ArrowBigRightDash";
 
-const SIZE = 24;
+const SIZE = 22;
 
 export const HOME_FEATURES = [
   [

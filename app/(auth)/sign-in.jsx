@@ -44,7 +44,7 @@ const SignIn = () => {
       style={styles.fullScreenBackground}
     >
       <SafeAreaView className="h-full">
-        <ScrollView contentContainerStyle={{ height: "100%" }}>
+        <ScrollView>
           <View className={"flex w-full items-center justify-center px-8"}>
             <Image
               source={Logo}
@@ -161,7 +161,7 @@ const SignIn = () => {
               </Link>
             </Text>
 
-            <Text className={"text-xl font-bold"} style={{ color: "#00a651" }}>
+            <Text className={"mb-4 text-xl font-bold"} style={{ color: "#00a651" }}>
               Forgot Pin
             </Text>
           </View>

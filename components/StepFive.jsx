@@ -82,9 +82,7 @@ const StepFive = ({ onPress, onBackPress }) => {
         {INFO.map((info, index) => (
           <View className={"mb-2 flex flex-row gap-4"} key={index}>
             <CircleCheckBig className={"mt-1 text-[#00a651]"} />
-            <Text className={"text-lg text-foreground/60"} style={{ maxWidth: 280 }}>
-              {info}
-            </Text>
+            <Text className={"flex-1 flex-wrap text-lg text-foreground/60"}>{info}</Text>
           </View>
         ))}
       </View>

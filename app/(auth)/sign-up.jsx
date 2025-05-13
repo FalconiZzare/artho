@@ -75,7 +75,7 @@ const SignUp = () => {
               />
             </View>
           </View>
-          <View className={"px-4"}>
+          <View className={"mb-4 px-4"}>
             <View className={"mb-1 mt-6 flex flex-row justify-between"}>
               <Text className={"text-lg font-bold text-foreground/80"}>{`Step ${step} of 5`}</Text>
               <Text className={"text-lg font-bold text-[#00a651]"}>{`${(step / 5) * 100}%`}</Text>
