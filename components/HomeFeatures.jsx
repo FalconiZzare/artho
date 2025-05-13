@@ -6,8 +6,7 @@ import { Link } from "expo-router";
 const HomeFeatures = () => {
   return (
     <View className={"flex items-center justify-center"}>
-      <Text>Hello</Text>
-      <View className={"flex w-full flex-row items-center justify-around pl-2"}>
+      <View className={"flex w-full flex-row items-center justify-around pl-2.5"}>
         {HOME_FEATURES[0].map((feature, index) => (
           <Link href={feature.href} key={`0${index}`}>
             <View className={"flex items-center justify-center"}>
