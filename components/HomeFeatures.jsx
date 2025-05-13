@@ -5,8 +5,9 @@ import { Link } from "expo-router";
 
 const HomeFeatures = () => {
   return (
-    <View className={"pl-1.5"}>
-      <View className={"flex flex-row"} style={{ gap: 24.5 }}>
+    <View className={"flex items-center justify-center"}>
+      <Text>Hello</Text>
+      <View className={"flex w-full flex-row items-center justify-around pl-2"}>
         {HOME_FEATURES[0].map((feature, index) => (
           <Link href={feature.href} key={`0${index}`}>
             <View className={"flex items-center justify-center"}>
@@ -25,7 +26,7 @@ const HomeFeatures = () => {
           </Link>
         ))}
       </View>
-      <View className={"mt-6 flex flex-row"} style={{ gap: 36 }}>
+      <View className={"mt-6 flex w-full flex-row items-center justify-around"}>
         {HOME_FEATURES[1].map((feature, index) => (
           <Link href={feature.href} key={`0${index}`}>
             <View className={"flex items-center justify-center"}>
